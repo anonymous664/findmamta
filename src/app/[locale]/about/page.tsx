@@ -27,12 +27,12 @@ export default function About() {
           {t(', stay informed, and stand with us.')}
           <br />
           <span className='text-blue-600 font-semibold'>
-            {t('If no one will do anything - WE WILL!')}
+            {t('We can make a difference!')}
           </span>
         </p>
         <p className='text-xl text-gray-600'>
           {t(
-            'This page is dedicated to uniting everyone who believes in the power of community and the importance of never giving up on one of our own.'
+            'This page is dedicated to uniting everyone who believes in the power of community and the importance of gathering around a single goal.'
           )}
           <br />
           <span className='text-pink-500 font-bold'>
