@@ -70,7 +70,6 @@ export default function DashboardPage() {
           </div>
         </div>
       </section>
-      <Footer />
     </div>
   );
 }
