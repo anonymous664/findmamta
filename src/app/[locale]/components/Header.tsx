@@ -7,19 +7,18 @@ import LogoIcon from '../../icons/logo'
 import LangSwitcher from './LangSwitcher'
 import ThemeSwitch from './ThemeSwitch'
 import React from 'react';
-import HeartIcon from '../../icons/github'
-
+import HeartIcon from '../../icons/heart'
 
 interface Props {
   locale: string
 }
+
 export const Header: FC<Props> = ({ locale }) => {
   const t = useTranslations('')
   return (
     <div className='mx-auto flex max-w-screen-2xl flex-row items-center justify-between p-5'>
       <Link lang={locale} href='/'>
         <div className='flex flex-row items-center'>
-          
           <strong className='mx-2 select-none'>#findmamtakafle</strong>
         </div>
       </Link>
@@ -28,19 +27,16 @@ export const Header: FC<Props> = ({ locale }) => {
           <Link lang={locale} href={`/about`}>
             {t('About')}
           </Link>
-          <a href=''>{t('Support')}</a>
-          <a href=''>{t('Other')}</a>
+          <Link lang={locale} href={`/updates`}>
+            {t('Updates')}
+          </Link>
+          <Link lang={locale} href={`/support`}>
+            {t('Support')}
+          </Link>
         </nav>
-        <ThemeSwitch />
-        <LangSwitcher />
-        <a
-          href='https://github.com/yahyaparvar/nextjs-template'
-          target='_blank'
-        >
-          <div className='size-8'>
-            <HeartIcon />
-          </div>
-        </a>
+        <div className='size-8'>
+          <HeartIcon />
+        </div>
       </div>
     </div>
   )
