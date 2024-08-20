@@ -9,6 +9,7 @@ import { Inter, Rubik, Space_Grotesk } from 'next/font/google'
 import NextTopLoader from 'nextjs-toploader'
 import { Header } from './components/Header'
 import { Footer } from './components/Footer'
+import { Analytics } from "@vercel/analytics/react"
 
 import './globals.css'
 
@@ -71,6 +72,7 @@ export default function RootLayout({
             />
             <Header locale={locale} />
             <main className='mx-auto max-w-screen-2xl'>{children}</main>
+            <Analytics/>
             <Footer></Footer>
           </NextIntlClientProvider>
         </ThemeProvider>
